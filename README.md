@@ -4,8 +4,8 @@
 姓名 ：邓泽 学号 ：18307130177
   
 ## 网址  
-Github respority:  https://github.com/rfotaku/Webproject1/edit/master
-Github Pages:  
+Github respority:  https://github.com/rfotaku/Webproject1/edit/master  
+Github Pages:  https://rfotaku.github.io/Webproject1/  
   
 ## 项目完成情况  
 首页——完成  
