@@ -1,10 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>上传图片</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/upload.css"/>
 </head>
 <body>
-
+<header>
+    <nav>
+        <ul id="navList">
+            <li><a href="real_index.html" class="navItem">首    页</a></li>
+            <li><a href="browser.html" class="navItem">浏览图片</a></li>
+            <li><a href="search.html" class="navItem">搜索图片</a></li>
+            <li class="usrItem">
+                <a href="#" class="usrItem">个人中心</a>
+                <ul id="usrMenu">
+                    <li class="menuItem">
+                        <a class="menuItem" href="upload.html" id="this">
+                            <div><img src="../background/add.png" class="icon" /><span class="opt">上    传</span></div>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a class="menuItem" href="my_photos.html">
+                            <div><img src="../background/photo.png" class="icon"/><span class="opt">我的照片</span></div>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a class="menuItem" href="collections.html">
+                            <div><img src="../background/collection.png" class="icon"/><span class="opt">我的收藏</span></div>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="../index.html" class="menuItem">
+                            <div><img src="../background/login.png" class="icon"/><span class="opt">登    入</span></div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div id="background">
+    <div class="blank"></div>
+    <div id="main">
+        <h1>上传图片</h1>
+        <div id="uploadBox">
+            <input type="file" accept="image/gif,image/jpeg, image/png, image/jpg" id="choose" onchange="showImg(this)"/>
+            <label for="choose">
+                <img src="../background/upload.png" id="uploadIcon"/>
+            </label>
+        </div>
+        <form id="pic_form" action="#">
+            <p>
+                <label for="pic_title">图片标题：</label>
+                <input type="text" id="pic_title">
+            </p>
+            <p>
+                <label for="pic_msg">图片描述：</label>
+                <input type="text" id="pic_msg">
+            </p>
+            <p>
+                <label for="pic_country">拍摄国家：</label>
+                <input type="text" id="pic_country">
+            </p>
+            <p>
+                <label for="pic_city">拍摄城市：</label>
+                <input type="text" id="pic_city">
+            </p>
+            <button onclick="alert('提交成功')">提    交</button>
+        </form>
+    </div>
+    <div class="blank"></div>
+</div>
+<script type="text/javascript">
+    function showImg(input) {
+        var file = input.files[0];
+        var reader = new FileReader()
+        // 图片读取成功回调函数
+        reader.onload = function(e) {
+            document.getElementById('uploadIcon').src=e.target.result
+        }
+        reader.readAsDataURL(file)
+    }
+</script>
+<footer><p class="foot">制作者：邓泽 学号：18307130177</p></footer>
 </body>
 </html>
