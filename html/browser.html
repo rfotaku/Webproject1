@@ -1,10 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>浏览图片</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/browser.css"/>
 </head>
 <body>
-
+<header>
+    <nav>
+        <ul id="navList">
+            <li><a href="real_index.html" class="navItem">首    页</a></li>
+            <li><a href="browser.html" class="navItem" id="this">浏览图片</a></li>
+            <li><a href="search.html" class="navItem">搜索图片</a></li>
+            <li class="usrItem">
+                <a href="#" class="usrItem">个人中心</a>
+                <ul id="usrMenu">
+                    <li class="menuItem">
+                        <a class="menuItem" href="upload.html">
+                            <div><img src="../background/upload.png" class="icon" /><span class="opt">上    传</span></div>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a class="menuItem" href="my_photos.html">
+                            <div><img src="../background/photo.png" class="icon"/><span class="opt">我的照片</span></div>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a class="menuItem" href="collections.html">
+                            <div><img src="../background/collection.png" class="icon"/><span class="opt">我的收藏</span></div>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="../index.html" class="menuItem">
+                            <div><img src="../background/login.png" class="icon"/><span class="opt">登    入</span></div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div id="background">
+    <div class="trigger">侧边栏
+    <div id="left_side">
+                <ul>
+                    <li class="side_item" id="search">
+                        <p>标题浏览</p>
+                        <input type="text" style="height:20px;">
+                        <button onclick="alert('已展示筛选结果')">搜索</button>
+                    </li>
+                    <li class="side_item" id="hot_country">
+                        <span>热门国家快速浏览</span>
+                        <ul id="hot_country_list">
+                            <li onclick="alert('已展示筛选结果')" class="hot_country">
+                                中  国
+                            </li>
+                            <li onclick="alert('已展示筛选结果')" class="hot_country">
+                                美  国
+                            </li>
+                            <li onclick="alert('已展示筛选结果')" class="hot_country">
+                                日  本
+                            </li>
+                            <li onclick="alert('已展示筛选结果')" class="hot_country">
+                                意大利
+                            </li>
+                            <li onclick="alert('已展示筛选结果')" class="hot_country">
+                                西班牙
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="side_item" id="hot_city">
+                        <span>热门城市快速浏览</span>
+                        <ul id="hot_city_list">
+                            <li onclick="alert('已展示筛选结果')" class="hot_city">
+                                上  海
+                            </li>
+                            <li onclick="alert('已展示筛选结果')" class="hot_city">
+                                东  京
+                            </li>
+                            <li onclick="alert('已展示筛选结果')" class="hot_city">
+                                佛罗伦萨
+                            </li>
+                            <li onclick="alert('已展示筛选结果')" class="hot_city">
+                                纽  约
+                            </li>
+                            <li onclick="alert('已展示筛选结果')" class="hot_city">
+                                开  罗
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="side_item">
+                        <div onclick="alert('已展示筛选结果')">热门内容快速浏览</div>
+                    </li>
+                </ul>
+            </div></div>
+    <div class="blank"></div>
+    <div id="main">
+        <div>
+            <ul id="selector">
+                <li>
+                    <select id="theme">
+                    <option value="">请选择主题</option>
+                    <option value="countryside">田园</option>
+                    <option value="universe">宇宙</option>
+                    <option value="nature">山水</option>
+                    <optiion value="sky">青空</optiion>
+                </select>
+                </li>
+                <li>
+                    <select id="country">
+                        <option value="">请选择国家</option>
+                        <option value="China">中国</option>
+                        <option value="America">美国</option>
+                        <option value="Japan">日本</option>
+                        <option value="Italy">意大利</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="city">
+                        <option value="">请选择城市</option>
+                    </select>
+                </li>
+                <li>
+                    <button onclick="alert('已展示筛选结果')">筛选</button>
+                </li>
+            </ul>
+        </div>
+        <div id="container">
+            <a href="browser.html"><img src="../travel-images/normal/medium/8646991554.jpg" class="pic"></a>
+            <a href="browser.html"><img src="../travel-images/normal/medium/5855774224.jpg" class="pic"></a>
+            <a href="browser.html"><img src="../travel-images/normal/medium/6114850721.jpg" class="pic"></a>
+            <a href="browser.html"><img src="../travel-images/normal/medium/5855729828.jpg" class="pic"></a>
+            <a href="browser.html"><img src="../travel-images/normal/medium/9493997865.jpg" class="pic"></a>
+            <a href="browser.html"><img src="../travel-images/normal/medium/5855735700.jpg" class="pic"></a>
+            <a href="browser.html"><img src="../travel-images/normal/medium/5855209453.jpg" class="pic"></a>
+            <div id="page">
+                <img src="../background/back.png" class="arrow"/>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <img src="../background/next.png" class="arrow"/>
+            </div>
+    </div>
+    </div>
+    <footer><p class="foot">制作者：邓泽 学号：18307130177</p></footer>
+</div>
+<script type="text/javascript">
+    const city=document.getElementById("country");
+    city.onclick=function () {
+        let val=city.value;
+        switch (val) {
+            case "China":
+                document.getElementById("city").innerHTML="<option>北京</option><option>上海</option><option>广州</option><option>成都</option><option>杭州</option>";
+                break;
+            case "America":
+                document.getElementById("city").innerHTML="<option>纽约</option><option>洛杉矶</option><option>华盛顿</option><option>阿拉斯加</option><option>夏威夷</option>";
+                break;
+            case "Japan":
+                document.getElementById("city").innerHTML="<option>东京</option><option>大阪</option><option>横滨</option><option>镰仓</option><option>琦玉</option>";
+                break;
+            case "Italy":
+                document.getElementById("city").innerHTML="<option>米兰</option><option>那不勒斯</option><option>罗马</option><option>佛罗伦萨</option><option>威尼斯</option>";
+                break;
+        }
+    }
+</script>
 </body>
 </html>
